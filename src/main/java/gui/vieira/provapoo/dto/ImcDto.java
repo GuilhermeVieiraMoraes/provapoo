@@ -11,6 +11,7 @@ package gui.vieira.provapoo.dto;
  */
 public class ImcDto {
     private float peso;
+    private float altura;
     private float imc;
     private String classificacao;
     private String risco;
@@ -29,7 +30,16 @@ public class ImcDto {
         this.peso = peso;
     }
 
+    public float getAltura() {
+        return altura;
+    }
+
+    public void setAltura(float altura) {
+        this.altura = altura;
+    }
+
     public float getImc() {
+        this.imc = this.peso/(this.altura*this.altura);
         return imc;
     }
 
