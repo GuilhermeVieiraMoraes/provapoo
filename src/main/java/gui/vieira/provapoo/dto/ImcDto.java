@@ -49,6 +49,20 @@ public class ImcDto {
     }
 
     public String getClassificacao() {
+        if(this.imc < 18.5){
+            this.classificacao="Abaixo do Peso";
+        }if(this.imc >= 18.5 & this.imc <=24.99){
+            this.classificacao="Peso Ideal";
+        }if(this.imc >= 25 & this.imc <=29.99){
+            this.classificacao="Excesso de Peso";
+        }if(this.imc >= 30 & this.imc <=34.99){
+            this.classificacao="Obesidade Grau 1";
+        }if(this.imc >= 35 & this.imc <=39.99){
+            this.classificacao="Obesidade Grau 2";
+        }else{
+            this.classificacao="Obesidade Grau 3";
+        }
+        
         return classificacao;
     }
 
@@ -57,6 +71,19 @@ public class ImcDto {
     }
 
     public String getRisco() {
+        if(this.imc < 18.5){
+            this.risco="Elevado";
+        }if(this.imc >= 18.5 & this.imc <=24.99){
+            this.risco="Inexistente";
+        }if(this.imc >= 25 & this.imc <=29.99){
+            this.risco="Elevado";
+        }if(this.imc >= 30 & this.imc <=34.99){
+            this.risco="Muito Elevado";
+        }if(this.imc >= 35 & this.imc <=39.99){
+            this.risco="Muitíssimo Elevado";
+        }else{
+            this.risco="Obesidade Mórbida";
+        }
         return risco;
     }
 

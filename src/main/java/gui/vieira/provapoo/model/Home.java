@@ -9,7 +9,7 @@ public class Home {
     @RequestMapping("/")
 	@ResponseBody
 	public String hello() {
-		return "Calculadora de IMC, use /imc?peso=(adicione o peso aqui)";
+		return "Calculadora de IMC, use /imc?peso=(adicione o peso aqui)&altura=(adicione a altura aqui)";
 	}
     
 }
