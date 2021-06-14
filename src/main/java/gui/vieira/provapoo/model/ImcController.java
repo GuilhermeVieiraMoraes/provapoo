@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/imc")
 public class ImcController {
     @GetMapping
-    public ResponseEntity<ImcDto> calcular(@RequestParam float peso){
-        return ResponseEntity.ok(new ImcDto(peso));
+    public ResponseEntity<ImcDto> calcular(@RequestParam float peso,@RequestParam float altura){
+        return ResponseEntity.ok(new ImcDto(peso,altura));
     
     }
 }

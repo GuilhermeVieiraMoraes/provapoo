@@ -16,8 +16,9 @@ public class ImcDto {
     private String classificacao;
     private String risco;
 
-    public ImcDto(float peso) {
+    public ImcDto(float peso, float altura) {
         this.peso = peso;
+        this.altura = altura;
     }
     
     
